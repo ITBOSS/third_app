@@ -1,0 +1,33 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: third_app_development
+  username: third_app_user
+  password: third_app_user
+  encoding: utf8
+
+test:
+  <<: *default
+  database: third_app_test
+  username: third_app_user
+  password: third_app_user
+  encoding: utf8
+
+production:
+  <<: *default
+  database: third_app_production
+  username: third_app_user
+  password: third_app_user
+  encoding: utf8
+
+staging:
+  <<: *default
+  database: third_app_staging
+  username: third_app_user
+  password: third_app_user
+  encoding: utf8
+
